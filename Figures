@@ -1,12 +1,16 @@
 #include <iostream>
 #include <cmath>
 
+using namespace std;
+
+#pragma once
+
 class Shape {
 public:
     virtual void draw() const = 0;
     virtual double area() const = 0;
     virtual double perimeter() const = 0;
-    virtual std::string type() const = 0; // Додали метод для визначення типу фігури
+    virtual string type() const = 0; // Додали метод для визначення типу фігури
 };
 
 class Circle : public Shape {
@@ -19,7 +23,7 @@ public:
     Circle(double radius, double x, double y) : radius(radius), x(x), y(y) {}
 
     void draw() const override {
-        std::cout << "Circle with radius " << radius << " at (" << x << ", " << y << ")" << std::endl;
+        cout << "Circle with radius " << radius << " at (" << x << ", " << y << ")" << endl;
     }
 
     double area() const override {
@@ -30,7 +34,7 @@ public:
         return 2.0 * 3.14159 * radius;
     }
 
-    std::string type() const override {
+    string type() const override {
         return "Circle";
     }
 };
@@ -48,8 +52,8 @@ public:
         : base(base), height(height), angle(angle), x(x), y(y) {}
 
     void draw() const override {
-        std::cout << "Parallelogram with base " << base << ", height " << height
-                  << ", angle " << angle << " degrees at (" << x << ", " << y << ")" << std::endl;
+        cout << "Parallelogram with base " << base << ", height " << height
+            << ", angle " << angle << " degrees at (" << x << ", " << y << ")" << endl;
     }
 
     double area() const override {
@@ -63,9 +67,11 @@ public:
     std::string type() const override {
         if (base == height) {
             return "Square";
-        } else if (angle == 90.0) {
+        }
+        else if (angle == 90.0) {
             return "Rectangle";
-        } else {
+        }
+        else {
             return "Rhombus";
         }
     }
@@ -89,11 +95,10 @@ public:
 
     void draw() const override {
         std::cout << "Triangle with sides " << side1 << ", " << side2 << ", " << side3
-                  << " at (" << x1 << ", " << y1 << "), (" << x2 << ", " << y2 << "), (" << x3 << ", " << y3 << ")" << std::endl;
+            << " at (" << x1 << ", " << y1 << "), (" << x2 << ", " << y2 << "), (" << x3 << ", " << y3 << ")" << std::endl;
     }
 
     double area() const override {
-        // Використовуємо формулу Герона для обчислення площі трикутника
         double s = (side1 + side2 + side3) / 2.0;
         return sqrt(s * (s - side1) * (s - side2) * (s - side3));
     }
@@ -102,18 +107,20 @@ public:
         return side1 + side2 + side3;
     }
 
-    std::string type() const override {
+    string type() const override {
         if (side1 == side2 && side2 == side3) {
             return "Equilateral Triangle";
-        } else if (side1 == side2 || side1 == side3 || side2 == side3) {
+        }
+        else if (side1 == side2 || side1 == side3 || side2 == side3) {
             return "Isosceles Triangle";
-        } else {
+        }
+        else {
             return "Scalene Triangle";
         }
     }
 
-    std::string angleType() const {
-        // Визначення типу трикутника за кутами
+    string angleType() const {
+    
         double angles[3];
         angles[0] = acos((side2 * side2 + side3 * side3 - side1 * side1) / (2 * side2 * side3)) * 180.0 / 3.14159;
         angles[1] = acos((side1 * side1 + side3 * side3 - side2 * side2) / (2 * side1 * side3)) * 180.0 / 3.14159;
@@ -121,9 +128,11 @@ public:
 
         if (angles[0] < 90 && angles[1] < 90 && angles[2] < 90) {
             return "Acute-angled";
-        } else if (angles[0] == 90 || angles[1] == 90 || angles[2] == 90) {
+        }
+        else if (angles[0] == 90 || angles[1] == 90 || angles[2] == 90) {
             return "Right-angled";
-        } else {
+        }
+        else {
             return "Obtuse-angled";
         }
     }
@@ -139,7 +148,7 @@ public:
     Pentagon(double side, double x, double y) : side(side), x(x), y(y) {}
 
     void draw() const override {
-        std::cout << "Pentagon with side " << side << " at (" << x << ", " << y << ")" << std::endl;
+        cout << "Pentagon with side " << side << " at (" << x << ", " << y << ")" << std::endl;
     }
 
     double area() const override {
@@ -159,90 +168,95 @@ public:
 int main() {
     int choice;
 
-    std::cout << "Choose a shape: \n";
-    std::cout << "1. Circle\n";
-    std::cout << "2. Parallelogram\n";
-    std::cout << "3. Triangle\n";
-    std::cout << "4. Pentagon\n";
-    std::cout << "Enter the corresponding number: ";
-    std::cin >> choice;
+    cout << "Choose a shape: \n";
+    cout << "1. Circle\n";
+    cout << "2. Parallelogram\n";
+    cout << "3. Triangle\n";
+    cout << "4. Pentagon\n";
+    cout << "Enter the corresponding number: ";
+    cin >> choice;
 
     if (choice == 1) {
         double radius, x, y;
-        std::cout << "Enter the radius of the circle: ";
-        std::cin >> radius;
-        std::cout << "Enter the x-coordinate of the circle: ";
-        std::cin >> x;
-        std::cout << "Enter the y-coordinate of the circle: ";
-        std::cin >> y;
+        cout << "Enter the radius of the circle: ";
+        cin >> radius;
+        cout << "Enter the x-coordinate of the circle: ";
+        cin >> x;
+        cout << "Enter the y-coordinate of the circle: ";
+        cin >> y;
 
         Circle circle(radius, x, y);
         circle.draw();
-        std::cout << "Area: " << circle.area() << std::endl;
-        std::cout << "Perimeter: " << circle.perimeter() << std::endl;
-        std::cout << "Type: " << circle.type() << std::endl;
-    } else if (choice == 2) {
+        cout << "Area: " << circle.area() << std::endl;
+        cout << "Perimeter: " << circle.perimeter() << std::endl;
+        cout << "Type: " << circle.type() << std::endl;
+    }
+    else if (choice == 2) {
         double base, height, angle, x, y;
-        std::cout << "Enter the base of the parallelogram: ";
-        std::cin >> base;
-        std::cout << "Enter the height of the parallelogram: ";
-        std::cin >> height;
-        std::cout << "Enter the angle (in degrees) of the parallelogram: ";
-        std::cin >> angle;
-        std::cout << "Enter the x-coordinate of the parallelogram: ";
-        std::cin >> x;
-        std::cout << "Enter the y-coordinate of the parallelogram: ";
-        std::cin >> y;
+        cout << "Enter the base of the parallelogram: ";
+        cin >> base;
+        cout << "Enter the height of the parallelogram: ";
+        cin >> height;
+        cout << "Enter the angle (in degrees) of the parallelogram: ";
+        cin >> angle;
+        cout << "Enter the x-coordinate of the parallelogram: ";
+        cin >> x;
+        cout << "Enter the y-coordinate of the parallelogram: ";
+        cin >> y;
 
         Parallelogram parallelogram(base, height, angle, x, y);
         parallelogram.draw();
-        std::cout << "Area: " << parallelogram.area() << std::endl;
-        std::cout << "Perimeter: " << parallelogram.perimeter() << std::endl;
-        std::cout << "Type: " << parallelogram.type() << std::endl;
-    } else if (choice == 3) {
+        cout << "Area: " << parallelogram.area() << std::endl;
+        cout << "Perimeter: " << parallelogram.perimeter() << std::endl;
+        cout << "Type: " << parallelogram.type() << std::endl;
+    }
+    else if (choice == 3) {
         double side1, side2, side3, x1, y1, x2, y2, x3, y3;
-        std::cout << "Enter the length of side 1: ";
-        std::cin >> side1;
-        std::cout << "Enter the length of side 2: ";
-        std::cin >> side2;
-        std::cout << "Enter the length of side 3: ";
-        std::cin >> side3;
-        std::cout << "Enter the x-coordinate of point 1: ";
-        std::cin >> x1;
-        std::cout << "Enter the y-coordinate of point 1: ";
-        std::cin >> y1;
-        std::cout << "Enter the x-coordinate of point 2: ";
-        std::cin >> x2;
-        std::cout << "Enter the y-coordinate of point 2: ";
-        std::cin >> y2;
-        std::cout << "Enter the x-coordinate of point 3: ";
-        std::cin >> x3;
-        std::cout << "Enter the y-coordinate of point 3: ";
-        std::cin >> y3;
+        cout << "Enter the length of side 1: ";
+        cin >> side1;
+        cout << "Enter the length of side 2: ";
+        cin >> side2;
+        cout << "Enter the length of side 3: ";
+        cin >> side3;
+        cout << "Enter the x-coordinate of point 1: ";
+        cin >> x1;
+        cout << "Enter the y-coordinate of point 1: ";
+        cin >> y1;
+        cout << "Enter the x-coordinate of point 2: ";
+        cin >> x2;
+        cout << "Enter the y-coordinate of point 2: ";
+        cin >> y2;
+        cout << "Enter the x-coordinate of point 3: ";
+        cin >> x3;
+        cout << "Enter the y-coordinate of point 3: ";
+        cin >> y3;
 
         Triangle triangle(side1, side2, side3, x1, y1, x2, y2, x3, y3);
         triangle.draw();
-        std::cout << "Area: " << triangle.area() << std::endl;
-        std::cout << "Perimeter: " << triangle.perimeter() << std::endl;
-        std::cout << "Type: " << triangle.type() << std::endl;
-        std::cout << "Angle Type: " << triangle.angleType() << std::endl;
-    } else if (choice == 4) {
+        cout << "Area: " << triangle.area() << std::endl;
+        cout << "Perimeter: " << triangle.perimeter() << std::endl;
+        cout << "Type: " << triangle.type() << std::endl;
+        cout << "Angle Type: " << triangle.angleType() << std::endl;
+    }
+    else if (choice == 4) {
         double side, x, y;
-        std::cout << "Enter the side of the pentagon: ";
-        std::cin >> side;
-        std::cout << "Enter the x-coordinate of the pentagon: ";
-        std::cin >> x;
-        std::cout << "Enter the y-coordinate of the pentagon: ";
-        std::cin >> y;
+        cout << "Enter the side of the pentagon: ";
+        cin >> side;
+        cout << "Enter the x-coordinate of the pentagon: ";
+        cin >> x;
+        cout << "Enter the y-coordinate of the pentagon: ";
+        cin >> y;
 
         Pentagon pentagon(side, x, y);
         pentagon.draw();
-        std::cout << "Area: " << pentagon.area() << std::endl;
-        std::cout << "Perimeter: " << pentagon.perimeter() << std::endl;
-        std::cout << "Type: " << pentagon.type() << std::endl;
-    } else {
-        std::cout << "Invalid choice. Exiting...\n";
+        cout << "Area: " << pentagon.area() << std::endl;
+        cout << "Perimeter: " << pentagon.perimeter() << std::endl;
+        cout << "Type: " << pentagon.type() << std::endl;
+    }
+    else {
+        cout << "Invalid choice. Exiting...\n";
     }
 
     return 0;
 }
+
