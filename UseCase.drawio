@@ -1,0 +1,73 @@
+<mxfile host="Electron" modified="2024-06-17T20:11:45.595Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/23.0.2 Chrome/120.0.6099.109 Electron/28.1.0 Safari/537.36" etag="8xLuTzMwnn3ocWAZwXod" version="23.0.2" type="device">
+  <diagram name="Страница — 1" id="fRS60G5y8LDYD_8jP_Z2">
+    <mxGraphModel dx="943" dy="468" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="lryhOCC0ga7o_A1QoKCl-12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="lryhOCC0ga7o_A1QoKCl-1" target="lryhOCC0ga7o_A1QoKCl-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="lryhOCC0ga7o_A1QoKCl-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="lryhOCC0ga7o_A1QoKCl-1" target="lryhOCC0ga7o_A1QoKCl-8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="lryhOCC0ga7o_A1QoKCl-14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="lryhOCC0ga7o_A1QoKCl-1" target="lryhOCC0ga7o_A1QoKCl-7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="lryhOCC0ga7o_A1QoKCl-15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="lryhOCC0ga7o_A1QoKCl-1" target="lryhOCC0ga7o_A1QoKCl-9">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="lryhOCC0ga7o_A1QoKCl-1" value="User" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
+          <mxGeometry x="50" y="210" width="30" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="lryhOCC0ga7o_A1QoKCl-6" value="Circle" style="ellipse;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="220" y="100" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="lryhOCC0ga7o_A1QoKCl-7" value="Paralellogram" style="ellipse;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="220" y="250" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="lryhOCC0ga7o_A1QoKCl-8" value="Triangle" style="ellipse;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="220" y="170" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="lryhOCC0ga7o_A1QoKCl-9" value="Pentogram" style="ellipse;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="220" y="340" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="lryhOCC0ga7o_A1QoKCl-28" value="Parameters" style="endArrow=open;endSize=12;dashed=1;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="lryhOCC0ga7o_A1QoKCl-6" target="lryhOCC0ga7o_A1QoKCl-29">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="260" y="170" as="sourcePoint" />
+            <mxPoint x="460" y="110" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="lryhOCC0ga7o_A1QoKCl-29" value="Radius, Area, type,&amp;nbsp; Centre coordinates, perimeter of circle&amp;nbsp;" style="html=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="510" y="85" width="110" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="lryhOCC0ga7o_A1QoKCl-30" value="Sides, Area, angles-type, side-type, perimeter of Triangle" style="html=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="510" y="160" width="120" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="lryhOCC0ga7o_A1QoKCl-31" value="Sides, Area, type, centre, perimeter of Paralellogram" style="html=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="510" y="245" width="120" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="lryhOCC0ga7o_A1QoKCl-32" value="Sides, Area, centre, perimeter of Pentogram" style="html=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="510" y="335" width="110" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="lryhOCC0ga7o_A1QoKCl-33" value="Parameters" style="endArrow=open;endSize=12;dashed=1;html=1;rounded=0;" edge="1" parent="1" source="lryhOCC0ga7o_A1QoKCl-8" target="lryhOCC0ga7o_A1QoKCl-30">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="370" y="190" as="sourcePoint" />
+            <mxPoint x="560" y="182" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="lryhOCC0ga7o_A1QoKCl-34" value="Parameters" style="endArrow=open;endSize=12;dashed=1;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="lryhOCC0ga7o_A1QoKCl-7" target="lryhOCC0ga7o_A1QoKCl-31">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="380" y="280" as="sourcePoint" />
+            <mxPoint x="570" y="272" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="lryhOCC0ga7o_A1QoKCl-35" value="Parameters" style="endArrow=open;endSize=12;dashed=1;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="lryhOCC0ga7o_A1QoKCl-9" target="lryhOCC0ga7o_A1QoKCl-32">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="380" y="360" as="sourcePoint" />
+            <mxPoint x="570" y="352" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
